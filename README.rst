@@ -453,12 +453,12 @@ platforms, but the tutorial might miss some information needed to compile it.
      // Draw. Sorta. 3 vertices starting from index 0.
      glDrawArrays(GL_TRIANGLES, 0, 3); 
 
-  OK, so the ``glEnableVertexAttribArray()`` tells we're vertex attribute slot
-  0. Basically we assign numbers to attributes we use in a single draw call,
-  and here we use just one so we just pick the first slot. Vertex attribute 
-  is any data that changes for each vertex. In this case, that is the vertex 
-  itself, or its position. In more complex code you might also have 
-  texture coordinates, normals, colors and so on.
+  ``glEnableVertexAttribArray()`` tells we're using vertex attribute slot 0.
+  Basically we assign numbers to attributes we use in a single draw call, and
+  here we use just one so we just pick the first slot. Vertex attribute is any
+  data that changes for each vertex. In this case, that is the vertex itself,
+  or its position. In more complex code you might also have texture
+  coordinates, normals, colors and so on.
 
   ``glBindBuffer()`` tells which VBO GL should draw from.
   ``glVertexAttribPointer()`` tells GL where exactly to find a vertex attribute
@@ -575,9 +575,9 @@ platforms, but the tutorial might miss some information needed to compile it.
   until you need something better. It will probably be good enough for a while.
   If you really want to know the details, google the functions.
      
-* OK, so now we can compile shaders, we need some shaders to compile.
-  Add the following code into the ``main()`` methods right before the 
-  event loop (``for(;;)``)::
+* Now we can compile shaders, we need some shaders to compile.  Add the
+  following code into the ``main()`` methods right before the event loop
+  (``for(;;)``)::
 
      string vertexShaderSrc = 
          q{
